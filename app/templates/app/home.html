@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя страница</title>
+    <style type="text/css">
+       #centerLayer_title {
+       margin-left: 30%;
+       width: 40%;
+       background: #ffffff;
+       padding: 10px;
+       text-align: center;
+       color: #444444;
+       font-family: Abel, Roboto;
+      }
+
+       #centerLayer_sub {
+       margin-left: 30%;
+       width: 40%;
+       background: #f2f5f8;
+       padding: 20px;
+       text-align: left;
+       color: #444444;
+       font-family: Abel, Roboto;
+      }
+    </style>
+</head>
+<body>
+<div id="centerLayer_title">
+    <h1>Выберите раздел</h1>
+</div>
+<div id="centerLayer_sub">
+    {% for title, url in pages.items %}
+        <a href="{{ url }}">{{ title }}</a>
+        <br>
+    {% endfor %}
+</div>
+</body>
+</html>
